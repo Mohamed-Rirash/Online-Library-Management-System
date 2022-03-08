@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeMasterPage.master.cs" Inherits="Online_Library_Management_System.HomeMasterPage" %>
+
+<%@ Register assembly="ASPNetFlash.NET3" namespace="ASPNetFlash" tagprefix="ASPNetFlash" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Home Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="MainStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 206px;
+            text-align: center;
+        }
+        .style2
+        {
+            width: 275px;
+            text-align: center;
+        }
+        .style3
+        {
+            width: 135px;
+        }
+        .style4
+        {
+            width: 150px;
+            text-align: center;
+        }
+        .style5
+        {
+            text-align: center;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr>
+            <td>
+                <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Images/CompanyPaintt.jpg" 
+                    Height="125px" Width="188px" CssClass="PanelAll">
+                </asp:Panel>
+            </td>
+            <td>
+                <asp:Panel ID="Panel2" runat="server" BackImageUrl="~/Images/copy.jpg" Height="118px" 
+                    style="text-align: left" Width="762px" HorizontalAlign="Left">
+                    <ASPNetFlash:Flash ID="Flash2" runat="server" Height="124px" 
+                        HeightAutoDetect="False" Quality="Best" Width="600px" 
+                        WidthAutoDetect="False" WindowMode="Transparent" MovieURL="~/flash.swf" 
+                        CssClass="PanelAll" ScaledAlignment="Left"></ASPNetFlash:Flash>
+                </asp:Panel>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table class="MenuTable">
+                    <tr>  
+                        
+                        <td class="style3">
+                            &nbsp;</td>
+                        <td class="style1">
+                            <asp:LinkButton ID="lnkhome" runat="server" 
+                                PostBackUrl="~/HomeFrm.aspx" CssClass="LinkButton" 
+                                CausesValidation="False">Home</asp:LinkButton>
+                        </td>
+                        <td class="style2">
+                            <asp:LinkButton ID="lnkreg" runat="server" PostBackUrl="~/SignUpPerInfo.aspx" 
+                                style="text-align: center" CssClass="LinkButton" CausesValidation="False">Registration</asp:LinkButton>
+                        </td>
+                        <td class="style4">
+                            <asp:LinkButton ID="lnkabt" runat="server" CssClass="LinkButton" 
+                                PostBackUrl="www.mainfo.co.in" CausesValidation="False">About us.</asp:LinkButton>
+                        </td>
+                        <td class="style5">
+                            <asp:LinkButton ID="lnklgn" runat="server" 
+                                ForeColor="#FF3300" PostBackUrl="~/LoginFrm.aspx" 
+                                onclick="LinkButton4_Click" CssClass="LinkButton" CausesValidation="False">Log in</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
